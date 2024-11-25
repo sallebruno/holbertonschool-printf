@@ -23,4 +23,4 @@
 <p></p>
 
 <h2 align="center">Contributors</h2>
-<p>This project was coded by Lucas Andrada and Bruno Salle from Holbeton Uruguay cohort 25, thank you for reading. </p>
+<p align="center">This project was coded by Lucas Andrada and Bruno Salle from Holbeton Uruguay cohort 25, thank you for reading. </p>
