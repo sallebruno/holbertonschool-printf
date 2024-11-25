@@ -1,5 +1,5 @@
 <h1  align="center">¡¡Building Our Own Printf!!</h1>
-<p>Learn how we crafted our own `printf` from the ground up! Uncover the inner workings of this essential C function and what brings it to life.</p>
+<p align="center">Learn how we crafted our own `printf` from the ground up! Uncover the inner workings of this essential C function and what brings it to life.</p>
 
 <h2 align="center">PrintF Description</h2>
 <p></p>
