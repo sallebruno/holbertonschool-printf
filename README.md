@@ -23,5 +23,5 @@
 <p>
 </p>
 
-<h2> Contributors </h2>
+<h2 allign="center"> Contributors </h2>
 <p>This project was coded by Lucas Andrada and Bruno Salle from Holbeton Uruguay cohort 25, thank you for reading. </p>
