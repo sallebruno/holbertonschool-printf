@@ -1,5 +1,6 @@
 <h1  align="center">¡¡Building Our Own Printf!!</h1>
 <p>Learn how we crafted our own `printf` from the ground up! Uncover the inner workings of this essential C function and what brings it to life.</p>
+
 <span style="color:red;">This text is red!</span>
 
 <h2 align="center">PrintF Description</h2>
