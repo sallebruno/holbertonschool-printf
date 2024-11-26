@@ -7,7 +7,7 @@ int _printf(const char *format, ...)
 	va_list args;
 	int i, j;
 	char c;
-	char (*flags)(char *);
+	int (*flags)(char *);
 	char *str;
 
 	va_start(args, format);

@@ -8,14 +8,13 @@ int _printf(const char *format, ...);
 
 typedef struct flags
 {
-  char flag;
-  int (*f)(char *str);
+	char flag;
+	int (*f)(char *str);
 } flags_t;
 
-char c (char *caracter);
-char *s (char *string);
-int d (char *str);
-int i (char *str);
-int (*get_functions(char *s);
+int print_char(char *caracter); /* todas estas funciones tienen que devolver cuantos caracteres imprimieron */
+int print_string(char *string);
+int print_int(char *str);
+int (*get_functions)(char *s);
 
 #endif

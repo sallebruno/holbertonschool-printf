@@ -1,37 +1,26 @@
 #include <stdio.h>
 #include "main.h"
 
-char c (char *caracter)
+int print_char(char *caracter)
 {
-    return (caracter[0]);
+	return (1);
 }
 
-char *s (char *string)
+int print_string(char *string) 
 {
-    return (string);
+	int i;
+
+	
 }
-int d (char *str)
+int print_int(char *str) /* %d y %i */
 {
-  int i, len;
+	int i, len;
 
-  len = 0;
-  
-  for (i = 0; str[i] != '\0'; i++)
-    {
-      len++;
-    }
-  return (len);
-}
+	len = 0;
 
-int i (char *str)
-{
-  int i, len;
-
-  len = 0;
-  
-  for (i = 0; str[i] != '\0'; i++)
-    {
-      len++;
-    }
-  return (len);
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		len++;
+	}
+	return (len);
 }
