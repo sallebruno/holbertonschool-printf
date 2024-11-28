@@ -21,7 +21,7 @@ int _printf(const char *format, ...)
 			{
 				case 'c':
 				c = va_arg(aux, int);
-				get_functions(c);
+				len += get_functions(c);
 				break;
 				case 's':
 				

@@ -27,7 +27,7 @@ int print_string(void *string)
 }
 int print_int(void *numero) /* %d y %i */
 {
-	int num = 0, aux = 0;
+	int num = 0, aux = 0, len = 0;
 
 	num = (int)numero;
 
@@ -38,6 +38,11 @@ int print_int(void *numero) /* %d y %i */
 	}
 	if (num > 0)
 	{
-		aux = num;
+	
 	}
+	if (num < 0)
+	{
+	
+	}
+	return (len);
 }
