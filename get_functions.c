@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <limits.h>
 
-int (*get_functions(char *s))(void *)
+int (*get_functions(const char *s))(void *)
 {
 
 	flags_t flags[] = {
@@ -16,12 +16,12 @@ int (*get_functions(char *s))(void *)
 
 	while (s[i] != '\0')
 	{
-		if (s[i] == "%")
+		if (s[i] == '%')
 		{
 			i++;
 		for (j = 0; flags[j].flag != 0; j++)
 		{
-			if (s[i] == flags[j].flag[0]) 
+			if (s[i] == flags[j].flag) 
 			{
 				return (flags[j].f);
 			}

@@ -16,6 +16,6 @@ typedef struct flags
 int print_char(void *caracter); /* todas estas funciones tienen que devolver cuantos caracteres imprimieron */
 int print_string(void *string);
 int print_int(void *str);
-int (*get_functions)(void *);
+int (*get_functions(const char *s))(void *);
 
 #endif
