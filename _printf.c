@@ -17,11 +17,12 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
+			f = get_functions((char *)&format[i]);
 			switch (format[i])
 			{
 				case 'c':
 				c = va_arg(aux, int);
-				len += get_functions(c);
+				len += f(&c);
 				break;
 				case 's':
 				

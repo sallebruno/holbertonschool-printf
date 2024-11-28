@@ -23,7 +23,6 @@ int print_string(void *string)
 		len++;
 	}
 	return (len);
-	
 }
 int print_int(void *numero) /* %d y %i */
 {
