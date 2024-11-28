@@ -2,26 +2,30 @@
 #include <stdio.h>
 #include <limits.h>
 
-int (*get_functions)(char *s)
+int (*get_functions(char *s))(void *)
 {
 
-	flags_t flag[] = {
+	flags_t flags[] = {
 		{'i', print_int},
 		{'d', print_int},
 		{'c', print_char},
 		{'s', print_string},
 		{0, NULL}
 	};
-	int i = 0;
+	int i = 0, j;
 
-	while (flags_t && s[i] != '\0')
+	while (s[i] != '\0')
 	{
 		if (s[i] == "%")
 		{
-			if (s[i + 1] == flags[i].flag[0]) 
+			i++;
+		for (j = 0; flags[j].flag != 0; j++)
+		{
+			if (s[i] == flags[j].flag[0]) 
 			{
-				return (flags[i].f);
+				return (flags[j].f);
 			}
+		}
 		}
 		i++;
 	}

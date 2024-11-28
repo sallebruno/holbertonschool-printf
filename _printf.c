@@ -4,32 +4,32 @@
 
 int _printf(const char *format, ...)
 {
-	va_list args;
-	int i, j;
-	char c;
-	int (*flags)(char *);
-	char *str;
+	int i, j, len = 0;
+	va_list aux;
+	char *str = "";
+	int c;
+	int (*f)(void *);
 
-	va_start(args, format);
-
+	va_start(aux, format);
 
 	for (i = 0; format[i] != '\0'; i++)
 	{
-		if (format[i] == '"')
-          	{
-			while (format[i] != '"' && format[i] != '%' && format[i] != '\0')
-			{
-				write(1, &format[i], 1);
-				i++;
-			}
-		}
-		else if (format[i] == '%')
+		if (format[i] == '%')
 		{
-			get_functions(format[i + 1]);
-				if (!get_functions)
-				{
-					return;
-				}
+			i++;
+			switch (format[i])
+			{
+				case 'c':
+				c = va_arg(aux, int);
+				get_functions(c);
+				break;
+				case 's':
+				
+				break;
+				case '%':
+
+				break;
+			}
 		}
 	}
 
