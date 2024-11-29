@@ -1,12 +1,9 @@
 #include "main.h"
-#include <stdio.h>
-#include <limits.h>
 
 int _printf(const char *format, ...)
 {
-	int i, c = 0, num = 0, len = 0;
+	int i, len = 0;
 	va_list aux;
-	int (*f)(void *);
 
 	va_start(aux, format);
 
@@ -15,38 +12,32 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			f = get_functions((char *)&format[i]);
-			if (f == NULL)
-			{
-				return (-1);
-			}
 			switch (format[i])
 			{
 				case 'c':
-				c = va_arg(aux, int);
-				len += f(&c);
+				len += print_char(va_arg(aux, int));
 				break;
 
 				case 's':
-				
+				len += print_string(va_arg(aux, char *));
 				break;
 
 				case '%':
-				write (1, "%", 1);
+				write(1, "%", 1);
 				break;
 
 				case 'i':
 				case 'd':
-				num = va_arg(aux, int);
-				len += f(&num); 
+				len += print_int(va_arg(aux, int));
 				break;
-	
+
 				default:
 				return (-1);
 			}
 		}
-		write(1, &format[i], 1);
+		else
+		len += write(1, &format[i], 1);
 	}
+	va_end(aux);
 	return (len);
-
 }

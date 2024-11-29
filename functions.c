@@ -1,55 +1,50 @@
-#include <stdio.h>
 #include "main.h"
 
-int print_char(void *caracter)
+int print_char(int caracter)
 {
-	char c = *((char *)caracter); /* Cast */
-	if (c)
+	if (caracter)
 	{
-	write(1, &c, 1);
+	write(1, &caracter, 1);
 	}
 	return (1);
 }
 
-int print_string(void *string) 
+int print_string(char *string) 
 {
-	int i = 0, len = 0;
-	char *str = (char *)string;
+	int i, len = 0;
 	
-	if (str == NULL)
+	if (string == NULL)
 	{
 		return (-1);
 	}
-	for (i = 0; str[i] != '\0'; i++)
+	for (i = 0; string[i] != '\0'; i++)
 	{
-		write(1, &str[i], 1);
+		write(1, &string[i], 1);
 		len++;
 	}
 	return (len);
 }
-int print_int(void *numero) /* %d y %i */
+int print_int(int numero) /* %d y %i */
 {
-	int num = 0, i = 0, len = 0;
+	int i = 0, len = 0;
 	char buffer[11];
 
-	num = *(int *)numero;
-
-	if (num == 0)
+	if (numero == 0)
 	{
 		write(1, "0", 1);
 		return (1);
 	}
-	if (num < 0)
+	if (numero < 0)
 	{
 		len += write(1, "-", 1);
-		num = -num;
+		numero = -numero;
 	}
-	while (num > 0)
+	while (numero > 0)
 	{
-		buffer[i++] = (num % 10) + '0';
-		num = num / 10;	
+		buffer[i++] = (numero % 10) + '0';
+		numero = numero / 10;	
 	}
-	while (i > 0)
+	while (i >= 0)
 	{
 		len += write(1, &buffer[i--], 1);
 	}
