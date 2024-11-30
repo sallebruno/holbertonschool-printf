@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 				break;
 
 				case '%':
-				write(1, "%", 1);
+				len += write(1, "%", 1);
 				break;
 
 				case 'i':
