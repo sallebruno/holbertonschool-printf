@@ -14,7 +14,7 @@ int _printf(const char *format, ...)
 			i++;
 			if (format[i] == '\0')
 			{
-				return (len);
+				break;
 			}
 
 			switch (format[i])
