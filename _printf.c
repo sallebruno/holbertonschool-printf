@@ -32,7 +32,9 @@ int _printf(const char *format, ...)
 				break;
 
 				default:
-				return (-1);
+				len += write(1, "%", 1);
+				len += write(1, &format[i], 1);
+				break;
 			}
 		}
 		else
