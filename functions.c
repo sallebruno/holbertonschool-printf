@@ -1,11 +1,7 @@
 #include "main.h"
 
 int print_char(int caracter)
-{
-	if (caracter)
-	{
-	write(1, &caracter, 1);
-	}
+{	write(1, &caracter, 1);
 	return (1);
 }
 
