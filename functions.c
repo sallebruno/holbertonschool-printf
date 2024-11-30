@@ -15,7 +15,7 @@ int print_string(char *string)
 	
 	if (string == NULL)
 	{
-		return (-1);
+		string = "(null)"
 	}
 	for (i = 0; string[i] != '\0'; i++)
 	{
