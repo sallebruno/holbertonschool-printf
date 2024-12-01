@@ -5,6 +5,8 @@ int _printf(const char *format, ...)
 	int i, len = 0;
 	va_list aux;
 
+	if (format == NULL)
+		return (-1);
 	va_start(aux, format);
 
 	for (i = 0; format[i] != '\0'; i++)
@@ -13,9 +15,7 @@ int _printf(const char *format, ...)
 		{
 			i++;
 			if (format[i] == '\0')
-			{
-				break;
-			}
+				return (-1);
 
 			switch (format[i])
 			{

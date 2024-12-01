@@ -15,8 +15,8 @@ int print_string(char *string)
 	}
 	for (i = 0; string[i] != '\0'; i++)
 	{
-		write(1, &string[i], 1);
 		len++;
+		write(1, &string[i], 1);
 	}
 	return (len);
 }
@@ -27,8 +27,7 @@ int print_int(int numero) /* %d y %i */
 
 	if (numero == 0)
 	{
-		write(1, "0", 1);
-		return (1);
+		return (write(1, "0", 1));
 	}
 	if (numero < 0)
 	{
@@ -38,7 +37,7 @@ int print_int(int numero) /* %d y %i */
 	while (numero > 0)
 	{
 		buffer[i++] = (numero % 10) + '0';
-		numero = numero / 10;	
+		numero /= 10;	
 	}
 	while (i >= 0)
 	{
