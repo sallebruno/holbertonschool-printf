@@ -1,5 +1,9 @@
 #include "main.h"
-
+/**
+ * _printf - Prints the output according to format
+ * @format: A constant string containing characters ans specifiers
+ * Return: The lenght of the characters printed
+ */
 int _printf(const char *format, ...)
 {
 	int i, len = 0;
@@ -16,26 +20,21 @@ int _printf(const char *format, ...)
 			i++;
 			if (format[i] == '\0')
 				return (-1);
-
 			switch (format[i])
 			{
 				case 'c':
 				len += print_char(va_arg(aux, int));
 				break;
-
 				case 's':
 				len += print_string(va_arg(aux, char *));
 				break;
-
 				case '%':
 				len += write(1, "%", 1);
 				break;
-
 				case 'i':
 				case 'd':
 				len += print_int(va_arg(aux, int));
 				break;
-
 				default:
 				len += write(1, "%", 1);
 				len += write(1, &format[i], 1);
