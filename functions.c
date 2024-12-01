@@ -52,9 +52,9 @@ int print_int(int numero)
 		buffer[i++] = (numero % 10) + '0';
 		numero /= 10;
 	}
-	while (i >= 0)
+	while (--i >= 0) /* Para que no se vaya de rango */
 	{
-		len += write(1, &buffer[i--], 1);
+		len += write(1, &buffer[i], 1);
 	}
 	return (len);
 }
