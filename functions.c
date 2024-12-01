@@ -1,14 +1,22 @@
 #include "main.h"
-
+/**
+ * print_char - Print a single char
+ * @caracter: caracter to be printed
+ * Return: 1
+ */
 int print_char(int caracter)
 {	write(1, &caracter, 1);
 	return (1);
 }
-
-int print_string(char *string) 
+/**
+ * print_string - Receives a string to printed
+ * @string: The string to print
+ * Return: The lenght of the string
+ */
+int print_string(char *string)
 {
 	int i, len = 0;
-	
+
 	if (string == NULL)
 	{
 		string = "(null)";
@@ -20,7 +28,12 @@ int print_string(char *string)
 	}
 	return (len);
 }
-int print_int(int numero) /* %d y %i */
+/**
+ * print_int - Receives a number to print
+ * @numero: The number to print
+ * Return: The total of numbers
+ */
+int print_int(int numero)
 {
 	int i = 0, len = 0;
 	char buffer[11];
@@ -37,7 +50,7 @@ int print_int(int numero) /* %d y %i */
 	while (numero > 0)
 	{
 		buffer[i++] = (numero % 10) + '0';
-		numero /= 10;	
+		numero /= 10;
 	}
 	while (i >= 0)
 	{
