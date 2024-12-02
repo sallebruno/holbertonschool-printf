@@ -17,7 +17,7 @@
 </p>
 
 <h2  align="center">Files Description</h2>
-<p>
+<p align="center">
   <ul>
   <li>_printf.c:This is the core file of the project, containing the _printf function implementation. It parses the format string, identifies specifiers, and calls the appropriate functions to handle each case.</li>
   <li>functions.c:Contains implementations for various format specifiers, such as printing characters, strings, and integers. These functions are invoked by _printf as needed.</li>
@@ -27,16 +27,80 @@
 </p>
 
 <h2  align="center">Flow Chart</h2>
-<p></p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/sallebruno/holbertonschool-printf/main/printf_flowchart.jpeg" alt="Flowchart of _printf" style="max-width: 100%; height: auto;">
+</p>
 
 <h2 align="center">Return Value</h2>
-<p></p>
+<p align="center"> This function returns an integer representing the number of characters successfully printed. If an error occurs, the function will return -1.
+
+Example: Calling `_printf("Example output.");` would display `Example output.` and return `15`.
+
+Error Example: Calling `_printf("%");` would result in a return value of `-1`.</p>
 
 <h2 align="center">Flag Characters Implemented</h2>
-<p></p>
+<p align="center">
+  | Flag Character | Usage                  |
+|----------------|------------------------|
+| `c`            | Prints a single character. |
+| `s`            | Prints a string.            |
+| `%`            | Prints the literal `%` character. |
+| `d`            | Prints an integer in decimal format. |
+| `i`            | Prints an integer in decimal format. |
+</p>
 
 <h2  align="center">Examples of Use</h2>
-<p></p>
+<p align="center"> Below are some examples demonstrating how to use the <code>_printf</code> function, along with the expected output and return values:</p>
+<h4>Printing a String</h4>
+<pre><code>
+_printf("Hello, Holberton!\n");
+</code></pre>
+<p><strong>Output:</strong> <br> Hello, Holberton! <br> <strong>Return Value:</strong> 17 (number of characters printed, including the newline)</p>
+
+<hr>
+
+<h4>Printing a Character</h4>
+<pre><code>
+_printf("The first letter is: %c\n", 'H');
+</code></pre>
+<p><strong>Output:</strong> <br> The first letter is: H <br> <strong>Return Value:</strong> 24</p>
+
+<hr>
+
+<h4>Printing Integers</h4>
+<pre><code>
+_printf("This is an integer: %d\n", 42);
+</code></pre>
+<p><strong>Output:</strong> <br> This is an integer: 42 <br> <strong>Return Value:</strong> 24</p>
+
+<pre><code>
+_printf("Negative number: %i\n", -123);
+</code></pre>
+<p><strong>Output:</strong> <br> Negative number: -123 <br> <strong>Return Value:</strong> 26</p>
+
+<hr>
+
+<h4>Printing a Literal Percentage Sign</h4>
+<pre><code>
+_printf("100%% sure!\n");
+</code></pre>
+<p><strong>Output:</strong> <br> 100% sure! <br> <strong>Return Value:</strong> 13</p>
+
+<hr>
+
+<h4>Handling Unsupported Specifiers</h4>
+<pre><code>
+_printf("Unknown: %r\n");
+</code></pre>
+<p><strong>Output:</strong> <br> Unknown: %r <br> <strong>Return Value:</strong> 12</p>
+
+<hr>
+
+<h4>Error Example</h4>
+<pre><code>
+_printf("%");
+</code></pre>
+<p><strong>Return Value:</strong> -1 (indicates an error due to incomplete format specifier)</p>
 
 <h2 align="center">Contributors</h2>
 <p align="center">This project was coded by Lucas Andrada and Bruno Salle from Holbeton Uruguay cohort 25, thank you for reading. </p>
