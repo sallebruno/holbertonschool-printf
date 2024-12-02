@@ -6,10 +6,12 @@
   
 <h2  align="center">What We're Working With</h2>  
 <p align="center">The project is divided into modular components, ensuring readability and maintainability.
--Format Parsing: The function parses the format string to identify specifiers and their corresponding arguments.
--Function Handling: Each specifier is associated with a dedicated function to handle its specific behavior.
--Variadic Functions: The project uses va_list, va_start, and va_end to manage variable arguments dynamically.
--Edge Cases: Special attention is given to handle edge cases, ensuring the function performs reliably across inputs.
+<ul>
+  <li>Format Parsing: The function parses the format string to identify specifiers and their corresponding arguments.</li>
+  <li>Function Handling: Each specifier is associated with a dedicated function to handle its specific behavior.</li>
+  <li>Variadic Functions: The project uses va_list, va_start, and va_end to manage variable arguments dynamically.</li>
+  <li>Edge Cases: Special attention is given to handle edge cases, ensuring the function performs reliably across inputs.</li>
+</ul>
 </p>
 
 <h2  align="center">Files Description</h2>
