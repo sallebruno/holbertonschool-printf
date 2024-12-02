@@ -7,15 +7,24 @@
 <h2  align="center">What We're Working With</h2>  
 <p align="center">The project is divided into modular components, ensuring readability and maintainability.
 <ul>
-  <li>Format Parsing: The function parses the format string to identify specifiers and their corresponding arguments.</li>
-  <li>Function Handling: Each specifier is associated with a dedicated function to handle its specific behavior.</li>
-  <li>Variadic Functions: The project uses va_list, va_start, and va_end to manage variable arguments dynamically.</li>
-  <li>Edge Cases: Special attention is given to handle edge cases, ensuring the function performs reliably across inputs.</li>
+  <li>Editors: We were allowed to use only vi, vim, or emacs for writing the code, so wwe stick to vi.</li>
+  <li>Compiler: We compiled using gcc with some strict flags (-Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format).</li>
+  <li>File Formatting: Each file concludes with a clean, single newline for proper formatting.</li>
+  <li>Code Style: The project adheres to the Betty style guide, validated with betty-style.pl and betty-doc.pl.</li>
+  <li>Coding Practices: Global variables were avoided where possible, and files were kept organized with a maximum of 5 functions each to ensure clarity and modularity.</li>
+  <li>Testing Environment: A main.c file was used for testing purposes. Please note that any modifications made for personal testing should not be pushed, as your version may differ from ours.</li>
 </ul>
 </p>
 
 <h2  align="center">Files Description</h2>
-<p></p>
+<p>
+  <ul>
+  <li>_printf.c:This is the core file of the project, containing the _printf function implementation. It parses the format string, identifies specifiers, and calls the appropriate functions to handle each case.</li>
+  <li>functions.c:Contains implementations for various format specifiers, such as printing characters, strings, and integers. These functions are invoked by _printf as needed.</li>
+  <li>main.c:This file serves as the entry point for testing the _printf function against the standard printf function. It contains a series of test cases to compare outputs, validate format specifiers, and ensure the correct handling of edge cases. </li>
+  <li>main.h:The main header file for the project. It declares the prototypes of all functions used in _printf, defines macros, and includes required standard libraries.</li>
+</ul>
+</p>
 
 <h2  align="center">Flow Chart</h2>
 <p></p>
